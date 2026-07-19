@@ -23,5 +23,7 @@ services:
         value: production
       - key: GEMINI_API_KEY
         sync: false          # Set manually in Render dashboard
+      - key: DATABASE_URL
+        sync: false          # Set manually in Render dashboard (PostgreSQL connection string)
       - key: ML_SERVER_URL
         sync: false          # Set to the agriscan-ml service URL after first deploy
