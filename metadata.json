@@ -1,0 +1,10 @@
+{
+  "name": "AgriScan AI",
+  "description": "An advanced, AI-powered agricultural diagnostic and crop portfolio tracking application.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

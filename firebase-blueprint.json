@@ -1,0 +1,62 @@
+{
+  "entities": {
+    "portfolio": {
+      "title": "CropPortfolio",
+      "description": "Information about a specific crop in active portfolio including growth logging and pathology scans.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the crop portfolio"
+        },
+        "name": {
+          "type": "string",
+          "description": "Human-readable name of the crop portfolio"
+        },
+        "lastScan": {
+          "type": "string",
+          "description": "ISO timestamp or text representing the last pathology scan date"
+        },
+        "status": {
+          "type": "string",
+          "description": "Current status of the crop (e.g., Healthy, Warning, infected)"
+        },
+        "image": {
+          "type": "string",
+          "description": "URL or image source for the crop portfolio illustration or photograph"
+        },
+        "healthScore": {
+          "type": "number",
+          "description": "Current computed health score from 0 to 100"
+        },
+        "moisture": {
+          "type": "number",
+          "description": "Current soil moisture levels as percentage"
+        },
+        "estYield": {
+          "type": "string",
+          "description": "Estimated target harvest yield"
+        },
+        "scienceName": {
+          "type": "string",
+          "description": "Botanical or scientific taxonomy name"
+        },
+        "growthStage": {
+          "type": "string",
+          "description": "The current crop vegetative or physiological phase"
+        },
+        "ownerId": {
+          "type": "string",
+          "description": "Google Auth UID of the owner user"
+        }
+      },
+      "required": ["id", "name", "ownerId"]
+    }
+  },
+  "firestore": {
+    "portfolios/{portfolioId}": {
+      "schema": "portfolio",
+      "description": "User specific crop portfolios stored securely by user ID"
+    }
+  }
+}

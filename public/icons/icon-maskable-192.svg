@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <defs>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#e8f0eb;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#b0cdbb;stop-opacity:0.2"/>
+      <stop offset="50%" style="stop-color:#b0cdbb;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#b0cdbb;stop-opacity:0.2"/>
+    </linearGradient>
+  </defs>
+  <!-- Full bleed background for maskable icon -->
+  <rect x="0" y="0" width="192" height="192" fill="#173124"/>
+  <!-- All content within safe zone: inner 80% = 153.6px centered, so padding ~19.2px each side -->
+  <!-- Leaf shape - scaled to fit within safe zone -->
+  <path d="M96 46 C122 46, 140 62, 140 88 C140 114, 122 136, 96 136 C83 136, 70 126, 65 112 C62 103, 65 90, 73 80 C80 71, 89 58, 96 46Z" fill="url(#leafGrad)" opacity="0.95"/>
+  <!-- Leaf vein (center) -->
+  <path d="M96 56 C96 56, 93 78, 90 94 C88 104, 86 118, 86 126" fill="none" stroke="#173124" stroke-width="2.5" stroke-linecap="round" opacity="0.3"/>
+  <!-- Leaf side veins -->
+  <path d="M92 72 L78 80" fill="none" stroke="#173124" stroke-width="1.5" stroke-linecap="round" opacity="0.2"/>
+  <path d="M90 86 L76 91" fill="none" stroke="#173124" stroke-width="1.5" stroke-linecap="round" opacity="0.2"/>
+  <path d="M89 100 L76 106" fill="none" stroke="#173124" stroke-width="1.5" stroke-linecap="round" opacity="0.2"/>
+  <path d="M95 68 L108 64" fill="none" stroke="#173124" stroke-width="1.5" stroke-linecap="round" opacity="0.2"/>
+  <path d="M93 82 L110 79" fill="none" stroke="#173124" stroke-width="1.5" stroke-linecap="round" opacity="0.2"/>
+  <path d="M91 96 L108 94" fill="none" stroke="#173124" stroke-width="1.5" stroke-linecap="round" opacity="0.2"/>
+  <!-- Scan line horizontal -->
+  <line x1="54" y1="92" x2="138" y2="92" stroke="url(#scanGrad)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Scan brackets left -->
+  <path d="M58 78 L58 72 L64 72" fill="none" stroke="#b0cdbb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M58 106 L58 112 L64 112" fill="none" stroke="#b0cdbb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Scan brackets right -->
+  <path d="M134 78 L134 72 L128 72" fill="none" stroke="#b0cdbb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M134 106 L134 112 L128 112" fill="none" stroke="#b0cdbb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Small scan dots -->
+  <circle cx="66" cy="92" r="1.2" fill="#b0cdbb" opacity="0.7"/>
+  <circle cx="126" cy="92" r="1.2" fill="#b0cdbb" opacity="0.7"/>
+</svg>

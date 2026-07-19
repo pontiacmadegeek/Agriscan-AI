@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>AgriScan AI - Crop Diagnostics & Portfolio Tracker</title>
+    <meta name="description" content="AI-powered crop pathology diagnostics and agronomic portfolio tracker. Scan crops, detect diseases, and manage your farm portfolio with Gemini AI." />
+
+    <!-- PWA Manifest & Theme -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#173124" />
+    <meta name="background-color" content="#173124" />
+
+    <!-- Apple PWA Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="AgriScan" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.svg" />
+
+    <!-- Microsoft PWA Meta Tags -->
+    <meta name="msapplication-TileColor" content="#173124" />
+    <meta name="msapplication-config" content="none" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/icons/icon-192.svg" />
+
+    <!-- Service Worker Registration with Update Detection -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', async () => {
+          try {
+            const registration = await navigator.serviceWorker.register('/sw.js', {
+              scope: '/'
+            });
+            console.log('[App] Service Worker registered:', registration.scope);
+
+            // Check for updates periodically
+            registration.addEventListener('updatefound', () => {
+              const newWorker = registration.installing;
+              if (newWorker) {
+                newWorker.addEventListener('statechange', () => {
+                  if (newWorker.state === 'activated') {
+                    // Show update notification if there was an existing SW
+                    if (navigator.serviceWorker.controller) {
+                      console.log('[App] New content available — please refresh.');
+                    }
+                  }
+                });
+              }
+            });
+
+            // Check for updates every 60 minutes
+            setInterval(() => {
+              registration.update();
+            }, 60 * 60 * 1000);
+          } catch (err) {
+            console.warn('[App] Service Worker registration failed:', err);
+          }
+        });
+
+        // Handle controller change (new SW activated)
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          console.log('[App] Controller changed — new service worker active.');
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

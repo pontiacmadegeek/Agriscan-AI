@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#e8f0eb;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#b0cdbb;stop-opacity:0.2"/>
+      <stop offset="50%" style="stop-color:#b0cdbb;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#b0cdbb;stop-opacity:0.2"/>
+    </linearGradient>
+  </defs>
+  <!-- Background rounded rectangle -->
+  <rect x="10" y="10" width="492" height="492" rx="100" ry="100" fill="#173124"/>
+  <!-- Subtle inner glow -->
+  <rect x="10" y="10" width="492" height="492" rx="100" ry="100" fill="none" stroke="#b0cdbb" stroke-width="2" opacity="0.15"/>
+  <!-- Leaf shape - stylized, modern -->
+  <path d="M256 100 C347 100, 412 155, 412 245 C412 336, 347 412, 256 412 C213 412, 165 374, 149 320 C139 288, 149 240, 181 202 C208 170, 235 138, 256 100Z" fill="url(#leafGrad)" opacity="0.95"/>
+  <!-- Leaf vein (center) -->
+  <path d="M256 132 C256 132, 245 212, 235 266 C227 304, 219 346, 219 378" fill="none" stroke="#173124" stroke-width="7" stroke-linecap="round" opacity="0.3"/>
+  <!-- Leaf side veins -->
+  <path d="M240 192 L192 218" fill="none" stroke="#173124" stroke-width="5" stroke-linecap="round" opacity="0.2"/>
+  <path d="M235 240 L181 256" fill="none" stroke="#173124" stroke-width="5" stroke-linecap="round" opacity="0.2"/>
+  <path d="M229 288 L187 310" fill="none" stroke="#173124" stroke-width="5" stroke-linecap="round" opacity="0.2"/>
+  <path d="M250 180 L299 165" fill="none" stroke="#173124" stroke-width="5" stroke-linecap="round" opacity="0.2"/>
+  <path d="M245 228 L310 218" fill="none" stroke="#173124" stroke-width="5" stroke-linecap="round" opacity="0.2"/>
+  <path d="M240 276 L304 272" fill="none" stroke="#173124" stroke-width="5" stroke-linecap="round" opacity="0.2"/>
+  <!-- Scan line horizontal -->
+  <line x1="120" y1="256" x2="392" y2="256" stroke="url(#scanGrad)" stroke-width="6" stroke-linecap="round"/>
+  <!-- Scan brackets left -->
+  <path d="M132 208 L132 186 L154 186" fill="none" stroke="#b0cdbb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M132 304 L132 326 L154 326" fill="none" stroke="#b0cdbb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Scan brackets right -->
+  <path d="M380 208 L380 186 L358 186" fill="none" stroke="#b0cdbb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M380 304 L380 326 L358 326" fill="none" stroke="#b0cdbb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Small scan dots -->
+  <circle cx="160" cy="256" r="4" fill="#b0cdbb" opacity="0.7"/>
+  <circle cx="352" cy="256" r="4" fill="#b0cdbb" opacity="0.7"/>
+</svg>

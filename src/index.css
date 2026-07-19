@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #173124;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #2d4739;
+  --color-on-primary-container: #98b5a3;
+  --color-inverse-primary: #b0cdbb;
+  
+  --color-secondary: #546341;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #d8e9bd;
+  --color-on-secondary-container: #5a6946;
+  
+  --color-tertiary: #42250b;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #5c3a1f;
+  --color-on-tertiary-container: #d4a582;
+  
+  --color-background: #f8faf6;
+  --color-on-background: #191c1a;
+  
+  --color-surface: #f8faf6;
+  --color-on-surface: #191c1a;
+  --color-surface-dim: #d8dbd7;
+  --color-surface-bright: #f8faf6;
+  --color-surface-variant: #e1e3df;
+  --color-on-surface-variant: #424844;
+  
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f4f0;
+  --color-surface-container: #eceeeb;
+  --color-surface-container-high: #e7e9e5;
+  --color-surface-container-highest: #e1e3df;
+  
+  --color-inverse-surface: #2e312f;
+  --color-inverse-on-surface: #eff1ed;
+  
+  --color-outline: #727973;
+  --color-outline-variant: #c2c8c2;
+  --color-surface-tint: #496455;
+  
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  
+  --radius-sm: 0.25rem;
+  --radius-DEFAULT: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  min-height: 100vh;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  line-height: 1;
+}
+
+.notepad-shadow {
+  box-shadow: 0 4px 6px -1px rgba(23, 49, 36, 0.05), 0 2px 4px -2px rgba(23, 49, 36, 0.05);
+}
+
+.viewfinder-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.4) 100%);
+}
+
+.scanning-line {
+  height: 2px;
+  background: #b0cdbb;
+  box-shadow: 0 0 15px #496455;
+}
+
+/* Hide scrollbar for cleaner mobile look */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
