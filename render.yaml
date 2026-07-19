@@ -1,0 +1,27 @@
+services:
+  # ── Service 1: FastAPI ML Server (Python/PyTorch + MobileNetV2) ─────────────
+  - type: web
+    name: agriscan-ml
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn ml_server:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    autoDeploy: true
+
+  # ── Service 2: Express + React Frontend/Backend (Node.js) ───────────────────
+  - type: web
+    name: agriscan-app
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.0.0
+      - key: NODE_ENV
+        value: production
+      - key: GEMINI_API_KEY
+        sync: false          # Set manually in Render dashboard
+      - key: ML_SERVER_URL
+        sync: false          # Set to the agriscan-ml service URL after first deploy
